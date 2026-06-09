@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CUP — Common Understanding Platform</title>
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <!-- ===== Top bar ===== -->
+  <header class="topbar">
+    <div class="brand">
+      <div class="brand-mark">CUP</div>
+      <div class="brand-text">
+        <div class="brand-title">Common Understanding Platform</div>
+        <div class="brand-sub">Operational Context Management</div>
+      </div>
+    </div>
+    <div class="op-banner" id="opBanner"></div>
+    <div class="topbar-right">
+      <div class="classification" id="classification"></div>
+      <div class="role-switch">
+        <label for="roleSelect">View as</label>
+        <select id="roleSelect">
+          <option value="Commander">Commander</option>
+          <option value="S3">S3 — Ops</option>
+          <option value="S2">S2 — Intel</option>
+          <option value="S4">S4 — Sustain</option>
+          <option value="S6">S6 — Signal</option>
+          <option value="Staff">Staff Primary</option>
+        </select>
+      </div>
+    </div>
+  </header>
+
+  <div class="layout">
+    <!-- ===== Sidebar nav ===== -->
+    <nav class="sidebar" id="sidebar">
+      <button class="nav-item active" data-view="dashboard"><span class="nav-ico">▣</span> Commander Dashboard</button>
+      <button class="nav-item" data-view="changes"><span class="nav-ico">⟳</span> Change Feed</button>
+      <button class="nav-item" data-view="estimates"><span class="nav-ico">▤</span> Running Estimates</button>
+      <button class="nav-item" data-view="assumptions"><span class="nav-ico">◈</span> Assumptions</button>
+      <button class="nav-item" data-view="graph"><span class="nav-ico">⬡</span> Dependency Graph</button>
+      <button class="nav-item" data-view="plans"><span class="nav-ico">♥</span> Plan Health</button>
+      <button class="nav-item" data-view="conflicts"><span class="nav-ico">⚠</span> Conflicts</button>
+      <button class="nav-item" data-view="decisions"><span class="nav-ico">◎</span> Decisions</button>
+      <button class="nav-item" data-view="summaries"><span class="nav-ico">✎</span> Summaries</button>
+      <div class="sidebar-foot">
+        <div class="live-dot"></div> Live context model
+        <div class="sidebar-note">Prototype · dummy data</div>
+      </div>
+    </nav>
+
+    <!-- ===== Main content ===== -->
+    <main class="content" id="content"></main>
+  </div>
+
+  <!-- ===== Detail drawer ===== -->
+  <div class="drawer-overlay" id="drawerOverlay"></div>
+  <aside class="drawer" id="drawer">
+    <button class="drawer-close" id="drawerClose">✕</button>
+    <div class="drawer-body" id="drawerBody"></div>
+  </aside>
+
+  <script src="assets/data.js"></script>
+  <script src="assets/app.js"></script>
+</body>
+</html>
